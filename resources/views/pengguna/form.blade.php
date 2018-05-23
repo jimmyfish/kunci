@@ -8,7 +8,16 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    Form Pengguna
+                    <form action="" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <label for="nama">Nama : </label>
+                            <input type="text" name="jeneng" id="jeneng" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="SIMPAN" class="btn btn-primary">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

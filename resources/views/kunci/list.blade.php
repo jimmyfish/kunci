@@ -8,7 +8,22 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    List Kunci
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nama Lokasi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($kunci as $item)
+                                <tr>
+                                    <td>{{ $item->id }}</td>
+                                    <td>{{ $item->nama_lokasi }}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                 </div>
             </div>
         </div>

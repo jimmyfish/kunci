@@ -9,6 +9,12 @@ class ListDataPinjamanController extends Controller
 {
     public function index()
     {
-        return view('data_pinjaman.list');
+        $dataPinjaman = \App\DataPinjaman::find(1)->pengguna;
+
+        return dd($dataPinjaman);
+
+        return view('data_pinjaman.list', [
+            'data_pinjaman' => $dataPinjaman,
+        ]);
     }
 }

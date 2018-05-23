@@ -9,6 +9,10 @@ class ListPenggunaController extends Controller
 {
     public function index()
     {
-        return view('pengguna.list');
+        $pengguna = \App\Pengguna::all();
+
+        return view('pengguna.list', [
+            'pengguna' => $pengguna,
+        ]);
     }
 }

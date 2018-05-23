@@ -9,6 +9,10 @@ class ListKunciController extends Controller
 {
     public function index()
     {
-        return view('kunci.list');
+        $kunci = \App\Kunci::all();
+
+        return view('kunci.list', [
+            'kunci' => $kunci,
+        ]);
     }
 }

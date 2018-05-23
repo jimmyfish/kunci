@@ -8,7 +8,22 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    List halaman pengguna.
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nama</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($pengguna as $item)
+                            <tr>
+                                <td>{{ $item->id }}</td>
+                                <td>{{ $item->nama }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

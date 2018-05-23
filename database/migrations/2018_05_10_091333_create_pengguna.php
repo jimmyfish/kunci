@@ -16,6 +16,7 @@ class CreatePengguna extends Migration
         Schema::create('pengguna', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
+            $table->timestamps();
         });
     }
 

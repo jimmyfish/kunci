@@ -15,10 +15,13 @@ class CreateDataPinjaman extends Migration
     {
         Schema::create('data_pinjaman', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_pengguna');
-            $table->integer('id_kunci');
+            $table->integer('id_pengguna')->unsigned();
+            $table->foreign('id_pengguna')->references('id')->on('pengguna');
+            $table->integer('id_kunci')->unsigned();
+            $table->foreign('id_kunci')->references('id')->on('kunci');
             $table->dateTime('tanggal_pinjam');
             $table->dateTime('tanggal_kembali');
+            $table->timestamps();
         });
     }
 
