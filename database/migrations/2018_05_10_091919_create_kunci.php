@@ -16,7 +16,6 @@ class CreateKunci extends Migration
         Schema::create('kunci', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_lokasi');
-            $table->timestamps();
         });
     }
 

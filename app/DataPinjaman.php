@@ -11,14 +11,16 @@ class DataPinjaman extends Model
     protected $fillable = [
         'id_pengguna', 'id_kunci',
     ];
+    
+    public $timestamps = false;
 
     public function pengguna()
     {
-        return $this->hasOne('App\Pengguna');
+        return $this->belongsTo('App\Pengguna');
     }
 
     public function kunci()
     {
-        return $this->hasOne(Kunci::class);
+        return $this->belongsTo('App\Kunci');
     }
 }

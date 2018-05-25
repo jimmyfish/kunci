@@ -11,4 +11,11 @@ class Kunci extends Model
     protected $fillable = [
         'nama_lokasi',
     ];
+    
+    public $timestamps = false;
+    
+    public function dataPinjaman()
+    {
+        return $this->hasMany('App\DataPinjaman');
+    }
 }

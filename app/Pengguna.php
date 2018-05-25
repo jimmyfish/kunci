@@ -11,9 +11,11 @@ class Pengguna extends Model
     protected $fillable = [
         'nama',
     ];
+    
+    public $timestamps = false;
 
     public function dataPinjaman()
     {
-        return $this->belongsTo('App\DataPinjaman');
+        return $this->hasMany('App\DataPinjaman');
     }
 }

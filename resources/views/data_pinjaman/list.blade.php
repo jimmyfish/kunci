@@ -18,12 +18,11 @@
                             </thead>
                             <tbody>
                                 @foreach ($data_pinjaman as $item)
-                                {{ dd($item->pengguna()->nama) }}
-                                {{-- <tr>
+                                <tr>
                                     <td>{{ $item->id }}</td>
-                                    <td>{{ $item->id_pengguna->nama }}</td>
-                                    <td>{{ $item->id_kunci->nama_lokasi }}</td>
-                                </tr> --}}
+                                    <td>{{ $item->pengguna->nama }}</td>
+                                    <td>{{ $item->kunci->nama_lokasi }}</td>
+                                </tr>
                                 @endforeach
                             </tbody>
                         </table>              
